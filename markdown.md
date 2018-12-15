@@ -332,4 +332,4 @@ class: center, middle
 
 ## (fin)
 
-.footnote[&#91;https://gpoppino.github.io/slepos11_presentation/&#93;(https://gpoppino.github.io/slepos11_presentation/)]
+[https://gpoppino.github.io/slepos11_presentation/](https://gpoppino.github.io/slepos11_presentation/)]
