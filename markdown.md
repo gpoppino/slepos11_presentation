@@ -331,3 +331,5 @@ class: center, middle
 # Preguntas?
 
 ## (fin)
+
+.footnote[&#91;https://gpoppino.github.io/slepos11_presentation/&#93;(https://gpoppino.github.io/slepos11_presentation/)]
