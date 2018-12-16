@@ -149,10 +149,37 @@ Una vez configurada una tienda en el servidor LDAP, se deben configurar e inicia
 
 Esto comprende crear o actualizar archivos de configuración de texto de cada servicio según su configuración almacenada en LDAP, e iniciar dicho servicio. Por ejemplo, para el servicio DHCP se genera el archivo `/etc/dhcpd.conf`.
 
+Hay dos métodos de inicialización de un Branch: online y offline.
+
+---
+
+# Inicialización de servidor Branch (cont.)
+
 Ejemplo:
 
 ```bash
 # posInitBranchServer
+------------------------------------------------------------------------------
+     BranchServer Configuration
+------------------------------------------------------------------------------
+[INFO] loading defaults from previous configuration
+Branch Server reinitialization...
+Available initialization modes:
+        1 = Online(default)
+        2 = Offline
+Please, select initialization mode: 1
+Please enter your organization/company name []: HPSA
+Please enter the 2 letter abbreviation of your country []: PE
+Please enter the name of organizational unit []: PROMART
+Please enter the location/branch name []: HPLMPRCRV0523
+Please enter the name or IP of the AdminServer []: admin.suse.ar
+Please enter the Branch Server access password:
+Trying to synchronize server certificates
+        with admin server...
+
+Initializing Branch LDAP server...
+Use Branch LDAP on localhost? (yes/no) [yes]
+...
 ```
 
 ---
