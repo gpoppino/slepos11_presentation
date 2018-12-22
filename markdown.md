@@ -265,6 +265,8 @@ Para _registrar_ una imagen (copiar y crear el objeto LDAP) con el servidor de A
     /var/lib/SLEPOS/system/images/ncr3000-1.0.0/ncr3000.i686-1.0.0.gz
 ```
 
+El resultado de ejecutar este comando es que el kernel e initrd quedan almacenados en `/srv/SLEPOS/boot` y la imagen en `/srv/SLEPOS/image` en el servidor de Administración Central. También se crea el objeto de la imagen en el servidor LDAP como ya se ha mencionado.
+
 ---
 
 # Sincronizar imagen desde Admin a Branch
