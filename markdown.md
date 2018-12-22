@@ -242,15 +242,15 @@ Para realizar esto de manera más rápida y eficiente, he creado el script inter
 
 Las imágenes para los puntos de venta se crean con una herramienta llamada [**`KIWI`**](https://opensource.suse.com/kiwi/index.html).
 
-`KIWI` es una herramienta de línea de comandos, pero también tiene una interfaz de YaST.
+`KIWI` es una herramienta de línea de comandos, pero también tiene una [interfaz de YaST](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#cha.slepos_imgcreator).
 
 `KIWI` crea una imagen basándose en un archivo de configuración en formato XML. Generalmente, estas configuraciones se encuentra en `/var/lib/SLEPOS/system/[nombre_de_imagen]/config.xml`.
 
-El archivo `config.xml` contiene el listado de paquetes, listado de usuarios, archivos _tar.gz_, etc. que serán incluidos en la imagen.
+El archivo [`config.xml`](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#ex.kiwi.configxml_sle11) contiene el listado de paquetes, listado de usuarios, archivos _tar.gz_, etc. que serán incluidos en la imagen.
 
-Los paquetes RPM se obtienen generalmente desde un servidor SMT (Subscription Management Tool) instalado localmente en el servidor de imágenes.
+Los paquetes RPM se obtienen generalmente desde un servidor [SMT (Subscription Management Tool)](https://www.suse.com/documentation/smt11/index.html) instalado localmente en el servidor de imágenes.
 
-El resultado de ejecutar `kiwi` es un kernel y un initrd, para realizar el boot por PXE de la imagen, y también el archivo de la imagen que será instalado en el punto de venta.
+El resultado de [ejecutar `kiwi`](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#cha.slepos_kiwi_sle11) es un kernel y un initrd, para realizar el boot por PXE de la imagen, y también el archivo de la imagen que será instalado en el punto de venta.
 
 ---
 
@@ -355,8 +355,8 @@ A grandes rasgos, estas son las características de [SUSE Manager for Retail 3.2
 
 class: center, middle
 
-# Preguntas?
+# Preguntas
 
 ## (fin)
 
-[https://gpoppino.github.io/slepos11_presentation/](https://gpoppino.github.io/slepos11_presentation/)]
+https://gpoppino.github.io/slepos11_presentation/
