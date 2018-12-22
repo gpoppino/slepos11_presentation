@@ -288,7 +288,7 @@ Se utiliza `rsync` para efectuar la copia.
 Pasos del boot de una caja registradora por primera vez:
 
 1. El kernel hace boot y carga el initrd, como cualquier otro Linux, pero el boot inicial se hace a través de PXE.
-2. La caja (script) sube un archivo con su información al Branch (hwtype.config).
+2. La caja (script) sube un archivo con su información al Branch (hwtype.MAC.HASH).
 3. El branch crea el objeto en LDAP y la configuración de la caja en `/srv/tftpboot/CR` llamado `config.MAC`. Donde MAC es la MAC address de la caja.
 4. La caja continua el boot y baja la imagen y archivos de configuración basándose en el archivo `config.MAC`.
 5. Se instala la imagen.
