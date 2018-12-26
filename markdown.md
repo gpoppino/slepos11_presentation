@@ -26,7 +26,7 @@ class: center, middle
 
 # Introducción
 
-SUSE Linux Point of Server 11 SP3 (SLEPOS 11 SP3) es una plataforma de software especializada para organizaciones de retail. Permite distribuir imagenes de sistemas operativos a cajas registradoras o máquinas de auto-servicio de una manera sencilla.
+SUSE Linux Enterprise Point of Service 11 SP3 (SLEPOS 11 SP3) es una plataforma de software especializada para organizaciones de retail. Permite distribuir imagenes de sistemas operativos a cajas registradoras o máquinas de auto-servicio de una manera sencilla.
 
 Es un _add-on_ que se agrega a SLES11 SP4 y SLES11 SP3.
 
@@ -99,7 +99,7 @@ Recreate LDAP database? All data in LDAP database will be destroyed! (yes/no)
 
 * Esta configuración se crea con el comando `posAdmin`, sin embargo, el procedimiento no es interactivo como con el comando `posInitAdminserver`.
 
-* Un ejemplo uno de los varios comandos que hay que ejecutar para dar de alta la configuración de un servidor Branch, es el siguiente:
+* Un ejemplo de uno de los varios comandos que hay que ejecutar para dar de alta la configuración de un servidor Branch, es el siguiente:
 
 ```bash
 # posAdmin \
