@@ -247,7 +247,7 @@ Las imágenes para los puntos de venta se crean con una herramienta llamada [**`
 
 El archivo [`config.xml`](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#ex.kiwi.configxml_sle11) contiene el listado de paquetes, listado de usuarios, archivos _tar.gz_, etc. que serán incluidos en la imagen.
 
-Los paquetes RPM se obtienen generalmente desde un servidor [SMT (Subscription Management Tool)](https://www.suse.com/documentation/smt11/index.html) instalado localmente en el servidor de imágenes.
+Los paquetes RPM se obtienen generalmente desde un servidor [SMT (Subscription Management Tool)](https://documentation.suse.com/smt/11.3/single-html/SLE-smt/) instalado localmente en el servidor de imágenes.
 
 El resultado de [ejecutar `kiwi`](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#cha.slepos_kiwi_sle11) es un kernel y un initrd, para realizar el boot por PXE de la imagen, y también el archivo de la imagen que será instalado en el punto de venta.
 
