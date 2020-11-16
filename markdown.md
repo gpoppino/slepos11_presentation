@@ -18,8 +18,7 @@ class: center, middle
 10. Registro y sincronización de imágenes
 11. Boot de imágenes
 12. Troubleshooting
-13. Soporte
-14. SUSE Manager for Retail 4.1
+13. SUSE Manager for Retail 4.1
 
 ---
 
@@ -321,15 +320,6 @@ A continuación se describen algunos problemas y sus posibles soluciones:
  * Verificar el status de la misma con `pos image-list` en el servidor Branch.
  * Verificar que el tamaño de disco del punto de venta sea igual o mayor al particionamiento indicado en el objeto de la caja registradora (scCashRegister -> scPartition) en LDAP.
 * Verificar que el ID de hardware del punto de venta se corresponda con los IDs ya creados en el objeto `scCashRegister` en LDAP.
-
----
-
-# Soporte
-
-Para que la solución de SLEPOS tenga soporte, se debe contar con lo siguiente:
-
-1. Servidores Admin, Branch(es) e Image en SLES11 SP4 + SLEPOS11 SP3: soporte general hasta 31 de Marzo del 2019 y con LTSS hasta el 31 de Marzo del 2022.
-2. Puntos de venta con SLES11 SP3 + SLEPOS11 SP3: soporte hasta 31 de Marzo del 2022.
 
 ---
 
