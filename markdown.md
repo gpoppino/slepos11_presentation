@@ -18,7 +18,8 @@ class: center, middle
 10. Registro y sincronización de imágenes
 11. Boot de imágenes
 12. Troubleshooting
-13. SUSE Manager for Retail 4.1
+13. Herramientas
+14. SUSE Manager for Retail 4.1
 
 ---
 
@@ -320,6 +321,17 @@ A continuación se describen algunos problemas y sus posibles soluciones:
  * Verificar el status de la misma con `pos image-list` en el servidor Branch.
  * Verificar que el tamaño de disco del punto de venta sea igual o mayor al particionamiento indicado en el objeto de la caja registradora (scCashRegister -> scPartition) en LDAP.
 * Verificar que el ID de hardware del punto de venta se corresponda con los IDs ya creados en el objeto `scCashRegister` en LDAP.
+
+---
+
+# Herramientas
+
+Algunas de las herramientas que pueden facilitar la configuración de la solución son:
+
+1. [pySLEPOSWorkstation](https://github.com/gpoppino/pySLEPOSWorkstation): agrega objetos workstations (objetos que representan cajas físicas en la tienda) al árbol LDAP desde un archivo en modo batch.
+2. [slepos_add_workstation.sh](https://github.com/gpoppino/suse-toolbox/blob/master/slepos_add_workstation.sh): agrega un objeto workstation (objeto que representa una caja física en la tienda) de manera interactiva al árbol LDAP.
+3. [slepos_setup_branch.sh](https://github.com/gpoppino/suse-toolbox/blob/master/slepos_setup_branch.sh): da de alta un servidor branch de manera interactiva en el árbol LDAP.
+4. [slepos_add_cash_register.sh](https://github.com/gpoppino/suse-toolbox/blob/master/slepos_add_cash_register.sh): agrega un objeto cash register (objeto que representa un modelo de caja) de manera interactiva al árbol LDAP.
 
 ---
 
