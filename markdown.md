@@ -239,7 +239,7 @@ Para realizar esto de manera más rápida y eficiente, he creado el script inter
 
 # Creación de imágenes
 
-Las imágenes para los puntos de venta se crean con una herramienta llamada [**`KIWI`**](https://opensource.suse.com/kiwi/index.html).
+Las imágenes para los puntos de venta se crean con una herramienta llamada [**`KIWI`**](https://documentation.suse.com/kiwi).
 
 `KIWI` es una herramienta de línea de comandos, pero también tiene una [interfaz de YaST](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#cha.slepos_imgcreator).
 
