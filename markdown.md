@@ -12,15 +12,14 @@ class: center, middle
 4. Configuración inicial: `posInitAdminserver`
 5. Configuración de Branch server y herramienta `posAdmin`
 6. Inicialización de Branch: `posInitBranchserver`
-7. Pantallazo de servicios que se ejecutan en un servidor Branch
+7. Overview de servicios que se ejecutan en un servidor Branch
 8. Comandos en un servidor Branch
 9. Creación de imágenes
-10. Registro y sincronización de imagenes
+10. Registro y sincronización de imágenes
 11. Boot de imágenes
 12. Troubleshooting
 13. Soporte
-14. Demos
-15. Futuro: SUSE Manager for Retail 3.2.x
+14. SUSE Manager for Retail 4.1
 
 ---
 
@@ -149,7 +148,7 @@ Una vez configurada una tienda en el servidor LDAP, se deben configurar e inicia
 
 Esto comprende crear o actualizar archivos de configuración de texto de cada servicio según su configuración almacenada en LDAP, e iniciar dicho servicio. Por ejemplo, para el servicio DHCP se genera el archivo `/etc/dhcpd.conf`.
 
-Hay dos métodos de inicialización de un Branch: online y offline.
+Hay dos métodos para iniciar un Branch: online y offline.
 
 ---
 
@@ -242,15 +241,15 @@ Para realizar esto de manera más rápida y eficiente, he creado el script inter
 
 Las imágenes para los puntos de venta se crean con una herramienta llamada [**`KIWI`**](https://opensource.suse.com/kiwi/index.html).
 
-`KIWI` es una herramienta de línea de comandos, pero también tiene una [interfaz de YaST](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#cha.slepos_imgcreator).
+`KIWI` es una herramienta de línea de comandos, pero también tiene una [interfaz de YaST](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#cha.slepos_imgcreator).
 
 `KIWI` crea una imagen basándose en un archivo de configuración en formato XML. Generalmente, estas configuraciones se encuentra en `/var/lib/SLEPOS/system/[nombre_de_imagen]/config.xml`.
 
-El archivo [`config.xml`](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#ex.kiwi.configxml_sle11) contiene el listado de paquetes, listado de usuarios, archivos _tar.gz_, etc. que serán incluidos en la imagen.
+El archivo [`config.xml`](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#ex.kiwi.configxml_sle11) contiene el listado de paquetes, listado de usuarios, archivos _tar.gz_, etc. que serán incluidos en la imagen.
 
 Los paquetes RPM se obtienen generalmente desde un servidor [SMT (Subscription Management Tool)](https://www.suse.com/documentation/smt11/index.html) instalado localmente en el servidor de imágenes.
 
-El resultado de [ejecutar `kiwi`](https://www.suse.com/documentation/slepos11/singlehtml/book_slepos/book_slepos.html#cha.slepos_kiwi_sle11) es un kernel y un initrd, para realizar el boot por PXE de la imagen, y también el archivo de la imagen que será instalado en el punto de venta.
+El resultado de [ejecutar `kiwi`](https://documentation.suse.com/sle-pos/11-SP3/single-html/SLEPOS-guide/#cha.slepos_kiwi_sle11) es un kernel y un initrd, para realizar el boot por PXE de la imagen, y también el archivo de la imagen que será instalado en el punto de venta.
 
 ---
 
@@ -321,7 +320,7 @@ A continuación se describen algunos problemas y sus posibles soluciones:
 * Problema: la imagen no puede ser instalada por algún motivo.
  * Verificar el status de la misma con `pos image-list` en el servidor Branch.
  * Verificar que el tamaño de disco del punto de venta sea igual o mayor al particionamiento indicado en el objeto de la caja registradora (scCashRegister -> scPartition) en LDAP.
- * Verificar que el ID de hardware del punto de venta se corresponda con los IDs ya creados en el objeto `scCashRegister` en LDAP.
+* Verificar que el ID de hardware del punto de venta se corresponda con los IDs ya creados en el objeto `scCashRegister` en LDAP.
 
 ---
 
@@ -334,24 +333,18 @@ Para que la solución de SLEPOS tenga soporte, se debe contar con lo siguiente:
 
 ---
 
-class: center, middle
+# SUSE Manager for Retail 4.1
 
-# Grandes demos aguardan. Esperemos que funcionen!
+A grandes rasgos, estas son las características de [SUSE Manager for Retail 4.1](https://documentation.suse.com/suma-retail/4.1/):
 
----
-
-# Futuro (Presente?): SUSE Manager for Retail 3.2.x
-
-A grandes rasgos, estas son las características de [SUSE Manager for Retail 3.2](https://www.suse.com/documentation/suse-manager-for-retail-3-2/):
-
-* Basado en SUSE Manager 3.2.x y SLES12 SP3 (solo 64bits).
+* Basado en SUSE Manager 4.1.
 * Ya no se almacena la configuración en LDAP.
 * El servidor Branch es un servidor Proxy de SUSE Manager.
 * Las configuraciones de Branch se aplican con _States de Salt_.
 * Se sigue utilizando _KIWI_ para la creación de imágenes.
 * Todos los servidores Branch y Cajas quedan registrados con SUSE Manager.
 * Las imágenes de los puntos de venta pueden ser inspeccionadas por patches y vulnerabilidades.
-* La configuración de la solución se realiza desde archivos [YAML](https://www.suse.com/documentation/suse-manager-for-retail-3-2/retail-getting-started/retail.chap.admin.html#_example_yaml_file_for_mass_configuration) o formularios de SUSE Manager.
+* La configuración de la solución puede realizarse desde archivos [YAML](https://documentation.suse.com/external-tree/en-us/suma/4.1/suse-manager/retail/retail-mass-config.html) o formularios de SUSE Manager.
 
 ---
 
